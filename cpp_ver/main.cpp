@@ -57,5 +57,8 @@ int main() {
 
 
     //cout<<desired_badges_kinds<<" "<<gacha_times<<endl;
+    cout<<"Press any letter to exit:"<<endl;
+    char tmp;
+    cin>>tmp;
     return 0;
 }
