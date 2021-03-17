@@ -1,4 +1,6 @@
 .idea
 cmake-build-debug
+cpp_ver/cmake-build-debug
+cpp_ver/.idea
 python_ver/.idea
 python_ver/venv
