@@ -28,31 +28,18 @@ int main() {
             *(goal_arr+j)=result;
         }
 
-        cout<<"this is the "<<i<<" result:";
-        for (int j = 0; j < gacha_times; ++j) {
+        cout<<"we are undergoing "<<i+1<<" times simulation.";
+        /*for (int j = 0; j < gacha_times; ++j) {
             cout<<*(goal_arr+j)<<" ";
-        }
+        }*/
         cout<<endl;
-
-        while (true){
-
-            bool find_result=is_get(goal_arr,current_badge,gacha_times);
-            //cout<<(find_result?"true":"false")<<endl;
-            if (outcome_badges_kinds==desired_badges_kinds){
-                succeed++;
-                break;
-            }
-            if (find_result){
-                current_badge++;
+        for (int j = 0; j < badge_kinds; ++j) {
+            if (is_get(goal_arr,j+1,gacha_times)){
                 outcome_badges_kinds++;
-                continue;
-            }
-            if (current_badge==badge_kinds)
-            { break;}
-            else {
-                current_badge++;
             }
         }
+        succeed=(outcome_badges_kinds==desired_badges_kinds)?succeed+1:succeed;
+
     }
 
 
@@ -60,36 +47,12 @@ int main() {
 
 
 
-
-
-
-
-
-
-
-
-        /*std::vector<int>::iterator it;
-        while (true){
-            it = find(goal.begin(), goal.end(), current_badge);
-            if (outcome_badges_kinds==desired_badges_kinds){
-                succeed++;
-                break;
-            }
-            if (it!=goal.end()){
-                current_badge++;
-                outcome_badges_kinds++;
-                continue;
-            } else{
-                if (current_badge==badge_kinds){continue;}
-                else {current_badge++;}
-            }
-        }  //end of while*/
-
-
-
     double prob=0;
-    prob=succeed/(gacha_times*times_of_simulation);
-    cout<<succeed<<endl;
+    cout<<"succeed times: "<<succeed<<endl;
+    auto double_succeed=double (succeed);
+    auto double_times=double (times_of_simulation);
+    prob=double_succeed/double_times;
+    cout<<"result prob: "<<prob<<endl;
 
 
 
