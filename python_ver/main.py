@@ -3,10 +3,10 @@ import random
 ##initialize
 gacha_times = int(input("Input how many gacha you will purchase:"))
 required_number = int(input("Input how many kinds of badges you want to get:"))
+goods_number = int(input("Input how many kinds of gacha exist:"))
 times = int(input("Input how many times you want to simulate:"))
 required = [i + 1 for i in range(required_number)]
 succeed = 0
-goods_number = 30
 
 for i in range(times):
     result = []
