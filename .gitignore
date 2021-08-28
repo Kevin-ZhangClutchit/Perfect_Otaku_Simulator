@@ -6,3 +6,5 @@ python_ver/.idea
 python_ver/venv
 python_ver/__pycache__/
 python_ver/build/
+build/
+main.spec

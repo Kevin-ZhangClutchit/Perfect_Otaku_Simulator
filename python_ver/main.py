@@ -1,5 +1,5 @@
 import random
-
+import _tkinter
 ##initialize
 gacha_times = int(input("Input how many gacha you will purchase:"))
 required_number = int(input("Input how many kinds of badges you want to get:"))
